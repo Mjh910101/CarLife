@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/text_white"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            android:id="@+id/actionItem_timeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/text_gary_02"
+            android:textSize="@dimen/text_size_17" />
+
+        <TextView
+            android:id="@+id/actionItem_moneyText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/actionItem_timeText"
+            android:gravity="right"
+            android:textColor="@color/text_gary_02"
+            android:textSize="@dimen/text_size_17" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/actionItem_addressText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/text_gary_02"
+        android:textSize="@dimen/text_size_15"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/actionItem_remarkBox"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/actionItem_remarkText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/text_gary_02"
+            android:textSize="@dimen/text_size_17" />
+
+
+        <TextView
+            android:id="@+id/actionItem_totalText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/actionItem_remarkText"
+            android:ellipsize="end"
+            android:gravity="right"
+            android:maxLines="1"
+            android:textColor="@color/text_gary_02"
+            android:textSize="@dimen/text_size_17" />
+
+    </RelativeLayout>
+
+</LinearLayout>

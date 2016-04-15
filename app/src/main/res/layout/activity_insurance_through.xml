@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/text_white"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <RelativeLayout
+            android:id="@+id/insuranceDataList_responsibilityBtn"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/solid_bule_box">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@drawable/responsibility_icon"
+                android:gravity="center"
+                android:text="本次主责方"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/text_size_18" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/insuranceDataList_notResponsibilityBtn"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/bule_box">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@drawable/not_responsibility_icon"
+                android:gravity="center"
+                android:text="非 主  责 方"
+                android:textColor="@color/title_bg"
+                android:textSize="@dimen/text_size_18" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/line_gary" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_gary" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/text_white"
+        android:padding="8dp"
+        android:text="理赔记录"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/text_size_18" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_gary" />
+
+    <ListView
+        android:id="@+id/insuranceDataList_dataList"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/text_white"
+        android:divider="@color/line_gary"
+        android:dividerHeight="1dp"></ListView>
+
+</LinearLayout>

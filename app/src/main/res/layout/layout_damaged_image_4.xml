@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+
+    <RelativeLayout
+        android:id="@+id/carDamaged_damaged41"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/damaged_4_1_image">
+
+        <ImageView
+            android:id="@+id/carDamaged_damagedImageForH"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scaleType="center" />
+
+        <TextView
+            android:id="@+id/carDamaged_damagedTextForH"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="H"
+            android:textColor="@color/text_gary_02"
+            android:textSize="@dimen/text_size_18" />
+
+        <TextView
+            android:id="@+id/carDamaged_damagedSizeForH"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/damaged_size_bg"
+            android:gravity="center"
+            android:text="6"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/text_size_9" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/carDamaged_damaged42"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/damaged_4_2_image">
+
+        <ImageView
+            android:id="@+id/carDamaged_damagedImageForI"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scaleType="center" />
+
+        <TextView
+            android:id="@+id/carDamaged_damagedTextForI"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="I"
+            android:textColor="@color/text_gary_02"
+            android:textSize="@dimen/text_size_18" />
+
+        <TextView
+            android:id="@+id/carDamaged_damagedSizeForI"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/damaged_size_bg"
+            android:gravity="center"
+            android:text="6"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/text_size_9" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/carDamaged_damaged43"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/damaged_4_3_image">
+
+        <ImageView
+            android:id="@+id/carDamaged_damagedImageForJ"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scaleType="center" />
+
+        <TextView
+            android:id="@+id/carDamaged_damagedTextForJ"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="J"
+            android:textColor="@color/text_gary_02"
+            android:textSize="@dimen/text_size_18" />
+
+        <TextView
+            android:id="@+id/carDamaged_damagedSizeForJ"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/damaged_size_bg"
+            android:gravity="center"
+            android:text="6"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/text_size_9" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

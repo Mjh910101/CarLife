@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:id="@+id/position_btnBox"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:paddingBottom="20dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="20dp">
+
+            <RelativeLayout
+                android:id="@+id/position_refreshBtn"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/solid_while_bule_box">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawableLeft="@drawable/refresh_position_icn"
+                    android:text="刷新定位"
+                    android:textColor="@color/title_bg"
+                    android:textSize="@dimen/text_size_17" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/position_saveBtn"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/solid_bule_box">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawableLeft="@drawable/save_position_icon"
+                    android:text="保存定位"
+                    android:textColor="@color/text_white"
+                    android:textSize="@dimen/text_size_17" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/position_baiduMap"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/position_btnBox"
+            android:layout_alignParentTop="true"
+            android:clickable="true" />
+
+        <RelativeLayout
+            android:id="@+id/position_positionIconBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/position_baiduMap"
+            android:layout_alignLeft="@id/position_baiduMap"
+            android:layout_alignRight="@id/position_baiduMap"
+            android:layout_alignTop="@id/position_baiduMap"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/position_icon" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/position_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gary_bg"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/solid_white_box"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <RelativeLayout
+                    android:id="@+id/positionDialog_soso"
+                    android:layout_width="250dp"
+                    android:layout_height="50dp">
+
+                    <ImageView
+                        android:id="@+id/positionDialog_sosoIcon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/soso_icon" />
+
+                    <TextView
+                        android:id="@+id/positionDialog_sosoDownText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/status_gray_box_02"
+                        android:text="请先下载"
+                        android:textColor="@color/text_white"
+                        android:textSize="@dimen/text_size_15" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_toLeftOf="@id/positionDialog_sosoDownText"
+                        android:layout_toRightOf="@id/positionDialog_sosoIcon"
+                        android:text="腾讯地图"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/text_size_18" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/positionDialog_baidu"
+                    android:layout_width="250dp"
+                    android:layout_height="50dp">
+
+                    <ImageView
+                        android:id="@+id/positionDialog_baiduIcon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/baidu_icon" />
+
+                    <TextView
+                        android:id="@+id/positionDialog_baiduDownText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/status_gray_box_02"
+                        android:text="请先下载"
+                        android:textColor="@color/text_white"
+                        android:textSize="@dimen/text_size_15" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_toLeftOf="@id/positionDialog_baiduDownText"
+                        android:layout_toRightOf="@id/positionDialog_baiduIcon"
+                        android:text="百度地图"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/text_size_18" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="250dp"
+                    android:layout_height="50dp">
+
+                    <TextView
+                        android:id="@+id/positionDialog_flishBtn"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/solid_bule_box"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="取    消"
+                        android:textColor="@color/text_white"
+                        android:textSize="@dimen/text_size_18" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/position_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</LinearLayout>

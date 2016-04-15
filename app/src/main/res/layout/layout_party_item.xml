@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/partyItem_pic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@id/partyItem_pic"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/partyItem_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="type"
+            android:textColor="@color/text_gary_02"
+            android:textSize="@dimen/text_size_16" />
+
+
+        <TextView
+            android:id="@+id/partyItem_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="title"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_size_17" />
+
+
+        <TextView
+            android:id="@+id/partyItem_descript"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="type"
+            android:textColor="@color/text_gary_02"
+            android:textSize="@dimen/text_size_16" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/partyItem_inIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/in_prity_icon"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/partyItem_inText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dp"
+                android:layout_toRightOf="@id/partyItem_inIcon"
+                android:text="已参加"
+                android:textColor="@color/text_red"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/partyItem_statusIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/partyItem_inText"
+
+                android:src="@drawable/stare_party_icon"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/partyItem_statusText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dp"
+                android:layout_toRightOf="@id/partyItem_statusIcon"
+                android:text="正在进行"
+                android:textColor="@color/bule"
+                android:visibility="gone" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/partyItem_likeIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/l_like_party_icon"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/partyItem_removeIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/jnout_parya_icon"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/partyItem_deleteIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/delete_pirty_icon"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/partyItem_contentIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/content_party_icon"
+                    android:visibility="gone" />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

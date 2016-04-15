@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_life_bg"
+    android:orientation="vertical"
+    android:paddingLeft="15dp">
+
+
+    <RelativeLayout
+        android:id="@+id/main_left_userBox"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="20dp"
+        android:paddingRight="15dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <ImageView
+                android:id="@+id/mainLsft_userPic"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:src="@drawable/man_pic_icon" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/right_icon" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/mainLsft_userName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/text_white"
+        android:textSize="@dimen/text_size_20" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_blue" />
+
+
+    <RelativeLayout
+        android:id="@+id/main_left_topUpMoney"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        android:paddingRight="15dp"
+        android:paddingTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/main_life_money_icon"
+            android:text="会员充值"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/text_size_22" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/right_icon" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_blue" />
+
+
+    <RelativeLayout
+        android:id="@+id/main_left_carData"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        android:paddingRight="15dp"
+        android:paddingTop="20dp">
+
+        <TextView
+            android:id="@+id/main_left_carDataText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/main_life_car_icon"
+            android:text="车辆资料"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/text_size_22" />
+
+        <TextView
+            android:id="@+id/main_left_notCarData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/main_left_carDataText"
+            android:layout_marginLeft="3dp"
+            android:layout_toRightOf="@id/main_left_carDataText"
+            android:text="未审核"
+            android:textColor="@color/text_gary_03"
+            android:visibility="gone" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/right_icon" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_blue" />
+
+
+    <RelativeLayout
+        android:id="@+id/main_left_claimsData"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        android:paddingRight="15dp"
+        android:paddingTop="20dp">
+
+        <TextView
+            android:id="@+id/main_left_claimsDataText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/main_life_claims_icon"
+            android:text="理赔资料"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/text_size_22" />
+
+        <TextView
+            android:id="@+id/main_left_noeClaimsData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/main_left_claimsDataText"
+            android:layout_marginLeft="3dp"
+            android:layout_toRightOf="@id/main_left_claimsDataText"
+            android:text="未审核"
+            android:textColor="@color/text_gary_03"
+            android:visibility="gone" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/right_icon" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_blue" />
+
+</LinearLayout>

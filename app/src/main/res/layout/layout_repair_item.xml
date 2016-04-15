@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/text_white"
+    android:paddingBottom="12dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="12dp">
+
+    <ImageView
+        android:id="@+id/repairItem_rightIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/input_position_right_icon" />
+
+    <LinearLayout
+        android:id="@+id/repairItem_nameBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/repairItem_maney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100"
+                android:textColor="@color/text_orange"
+                android:textSize="@dimen/text_size_18" />
+
+
+            <TextView
+                android:id="@+id/repairItem_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="已付款"
+                android:textColor="@color/text_gary_02"
+                android:textSize="@dimen/text_size_9" />
+
+            <ImageView
+                android:id="@+id/repairItem_setllingIcon"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:visibility="gone"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/seting_icon" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/repairItem_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/store_name_icon"
+            android:text="address"
+            android:textColor="@color/text_gary_02"
+            android:textSize="@dimen/text_size_16" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/repairItem_rightIcon"
+        android:layout_toRightOf="@id/repairItem_nameBox"
+        android:gravity="right"
+        android:orientation="vertical"
+        android:paddingRight="5dp">
+
+        <TextView
+            android:id="@+id/repairItem_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:drawableLeft="@drawable/server_day_icon"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="day"
+            android:textColor="@color/text_gary_02"
+            android:textSize="@dimen/text_size_15" />
+
+
+        <TextView
+            android:id="@+id/repairItem_tel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/server_tel_icon"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="tel"
+            android:textColor="@color/text_gary_02"
+            android:textSize="@dimen/text_size_15" />
+
+    </LinearLayout>
+
+</RelativeLayout>

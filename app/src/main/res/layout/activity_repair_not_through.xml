@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/not_through_icon" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:gravity="center"
+        android:text="抱歉，您的理赔资料或车辆资料还未提交，请即上传资料！"
+        android:textColor="@color/text_gary_05"
+        android:textSize="@dimen/text_size_18" />
+
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/text_gary_05"
+        android:textSize="@dimen/text_size_18" />
+
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:gravity="center"
+        android:text="客服电话:800-999-3105"
+        android:textColor="@color/text_gary_02"
+        android:textSize="@dimen/text_size_15" />
+
+
+    <TextView
+        android:id="@+id/insuranceDataList_backBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/title_bg"
+        android:gravity="center"
+        android:padding="6dp"
+        android:text="确        定"
+        android:textColor="@color/text_white"
+        android:textSize="@dimen/text_size_17" />
+</LinearLayout>

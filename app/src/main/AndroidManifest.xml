@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.itkc_carlife">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.itkc_carlife.activitys.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--提交后提示界面，半透明-->
+        <activity
+            android:name=".activitys.ResultActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Transparent" />
+        <activity
+            android:name=".activitys.PositionDailogActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Transparent" />
+        <activity
+            android:name="com.itkc_carlife.activitys.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|stateUnchanged" />
+        <activity
+            android:name="com.itkc_carlife.activitys.UserModifyActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|stateUnchanged" />
+        <activity
+            android:name="com.itkc_carlife.activitys.TopUpMoneyActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|stateUnchanged" />
+        <activity
+            android:name="com.itkc_carlife.activitys.TopUpConfirmActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.itkc_carlife.activitys.InputCarDataActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|stateUnchanged" />
+        <activity
+            android:name="com.itkc_carlife.activitys.InputClaimsDataActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|stateUnchanged" />
+        <activity
+            android:name="com.itkc_carlife.activitys.WebActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.itkc_carlife.activitys.ActionDataListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.itkc_carlife.activitys.ScanningActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.itkc_carlife.activitys.PayInputMoneyActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|stateUnchanged" />
+        <activity
+            android:name="com.itkc_carlife.activitys.PayFixedMoneyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.itkc_carlife.activitys.PayResultsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.itkc_carlife.activitys.InputCarDamagedActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.itkc_carlife.activitys.SettingDataListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|stateUnchanged" />
+        <activity
+            android:name="com.itkc_carlife.activitys.QRCodeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.itkc_carlife.activitys.SettingInputMessageActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|stateUnchanged" />
+        <activity
+            android:name="com.itkc_carlife.activitys.PositionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.itkc_carlife.activitys.AddDamagedImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.itkc_carlife.activitys.ImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.itkc_carlife.activitys.InputVideoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.itkc_carlife.activitys.PlayVideoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.itkc_carlife.activitys.SettlingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.itkc_carlife.activitys.CarAreaActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.itkc_carlife.activitys.RepairDataListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.itkc_carlife.activitys.RepairInputMessageActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|stateUnchanged" />
+        <activity
+            android:name="com.itkc_carlife.activitys.RepairActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|stateUnchanged" />
+        <activity
+            android:name="com.itkc_carlife.activitys.ImageGridActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.itkc_carlife.activitys.RepairStoreListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.itkc_carlife.activitys.RepairStoreActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.itkc_carlife.activitys.RepairConfirmActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.itkc_carlife.activitys.RepairPlayDataActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.itkc_carlife.activitys.PayRepairMoneyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.itkc_carlife.activitys.PartyListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.itkc_carlife.activitys.UserPartyListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.itkc_carlife.activitys.AddPartyActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|stateUnchanged" />
+        <activity
+            android:name="com.itkc_carlife.activitys.ParytActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.itkc_carlife.activitys.SettlingOrderListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.itkc_carlife.activitys.MapActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.itkc_carlife.activitys.ServerShopActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.itkc_carlife.activitys.ServerShopCommentActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|stateUnchanged" />
+        <activity
+            android:name="com.itkc_carlife.activitys.WaitingRepairStoreActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <!-- alipay sdk begin -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden"></activity>
+
+        <!--百度定位-->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="jQU0uHRM9seXLVVu0ewg1Nlu" />
+
+        <!--推送-->
+        <service
+            android:name="com.avos.avoscloud.PushService"
+            android:exported="true" />
+        <receiver android:name="com.avos.avoscloud.AVBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

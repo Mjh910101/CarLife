@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/text_black"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:id="@+id/video_btnBox"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:paddingBottom="20dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="20dp"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/video_deleteBtn"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/white_box">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawableLeft="@drawable/video_delete_icon"
+                    android:text="重拍"
+                    android:textColor="@color/text_white"
+                    android:textSize="@dimen/text_size_17" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/video_saveBtn"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/white_box">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawableLeft="@drawable/video_save_icon"
+                    android:text="保存"
+                    android:textColor="@color/text_white"
+                    android:textSize="@dimen/text_size_17" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/video_btnBox">
+
+            <VideoView
+                android:id="@+id/video_videoView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true" />
+
+            <ImageView
+                android:id="@+id/video_playIcon"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/play_video_icon"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/video_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</LinearLayout>

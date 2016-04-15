@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/text_white"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="8dp"
+            android:text="    维修单号"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_size_17" />
+
+        <TextView
+            android:id="@+id/repair_id"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:textColor="@color/text_gary_02"
+            android:textSize="@dimen/text_size_17" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_gary" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/text_white"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="8dp"
+            android:text="    日        期"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_size_17" />
+
+        <TextView
+            android:id="@+id/repair_dayText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:textColor="@color/text_gary_02"
+            android:textSize="@dimen/text_size_17" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_gary" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/text_white"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/repair_carMasterText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:text="    车        主"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_size_17" />
+
+        <TextView
+            android:id="@+id/repair_carMasterName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="7dp"
+            android:textColor="@color/text_gary_02"
+            android:textSize="@dimen/text_size_17" />
+
+        <TextView
+            android:id="@+id/repair_carMasterTel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="7dp"
+            android:drawableLeft="@drawable/tel_icon"
+            android:textColor="@color/text_gary_02"
+            android:textSize="@dimen/text_size_17" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_gary" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/text_white"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/repair_addressText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:text="    定        位"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_size_17" />
+
+        <TextView
+            android:id="@+id/repair_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="7dp"
+            android:layout_toRightOf="@id/repair_addressText"
+            android:drawableLeft="@drawable/input_position_life_icon"
+            android:drawableRight="@drawable/input_position_right_icon"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/text_gary_02"
+            android:textSize="@dimen/text_size_17" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_gary" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/text_white"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/repair_carNumberText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:text="    车牌号码"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_size_17" />
+
+        <TextView
+            android:id="@+id/repair_carNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="7dp"
+            android:layout_toRightOf="@id/repair_carNumberText"
+            android:textColor="@color/text_gary_02"
+            android:textSize="@dimen/text_size_17" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_gary" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/text_white"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/repair_carDamagedText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:text="    受损图片"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_size_17" />
+
+        <TextView
+            android:id="@+id/repair_carDamaged"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="7dp"
+            android:layout_toRightOf="@id/repair_carDamagedText"
+            android:drawableRight="@drawable/input_position_right_icon"
+            android:textColor="@color/text_gary_02"
+            android:textSize="@dimen/text_size_17" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/line_gary" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_gary" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/text_white"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/repair_videoText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="8dp"
+            android:text="    受损视频"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_size_17" />
+
+
+        <ImageView
+            android:id="@+id/repair_videoideo"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="7dp"
+            android:layout_toRightOf="@id/repair_videoText"
+            android:background="@color/text_black"
+            android:padding="10dp"
+            android:src="@drawable/play_video_icon" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_gary" />
+
+    <LinearLayout
+        android:id="@+id/repair_descriptBox"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/text_white"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:text="    受损描述"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_size_17" />
+
+        <TextView
+            android:id="@+id/repair_descript"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:textColor="@color/text_gary_02"
+            android:textSize="@dimen/text_size_17" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_gary" />
+
+    <LinearLayout
+        android:id="@+id/repair_expectBox"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/text_white"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="8dp"
+            android:text="期望维修价"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_size_17" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:text="￥"
+            android:textColor="@color/text_orange"
+            android:textSize="@dimen/text_size_17" />
+
+        <EditText
+            android:id="@+id/repair_expectText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_stype_lucency"
+            android:inputType="numberDecimal"
+            android:textColor="@color/text_orange"
+            android:textSize="@dimen/text_size_17" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_gary" />
+
+    <LinearLayout
+        android:id="@+id/repair_dayBox"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/text_white"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="8dp"
+            android:text="    期望工时"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_size_17" />
+
+
+        <EditText
+            android:id="@+id/repair_expectWorkDayText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:background="@drawable/input_stype_lucency"
+            android:inputType="numberDecimal"
+            android:textColor="@color/text_orange"
+            android:textSize="@dimen/text_size_17" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/line_gary" />
+
+</LinearLayout>

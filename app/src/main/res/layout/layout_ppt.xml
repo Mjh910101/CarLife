@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ppt_box"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.itkc_carlife.views.InsideViewFlipper
+        android:id="@+id/ppt_images"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/text_white"></com.itkc_carlife.views.InsideViewFlipper>
+
+    <FrameLayout
+        android:id="@+id/ppt_ballLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/ppt_images">
+
+        <LinearLayout
+            android:id="@+id/ppt_ball"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"></LinearLayout>
+    </FrameLayout>
+
+</RelativeLayout>

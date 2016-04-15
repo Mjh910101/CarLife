@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/text_white"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <RelativeLayout
+            android:id="@+id/repairDataList_responsibilityBtn"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/solid_bule_box"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@drawable/responsibility_icon"
+                android:gravity="center"
+                android:text="快赔抢修"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/text_size_18" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/repairDataList_addResponsibilityBtn"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/solid_bule_box">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@drawable/repair_icon"
+                android:gravity="center"
+                android:text="新增抢修"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/text_size_18" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/line_gary" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_gary" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:background="@color/text_white"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/repairDataList_waitingBtn"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/repairDataList_waitingText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="待发布抢修单"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/text_size_17" />
+
+            <View
+                android:id="@+id/repairDataList_waitingLine"
+                android:layout_width="wrap_content"
+                android:layout_height="2dp"
+                android:layout_alignLeft="@id/repairDataList_waitingText"
+                android:layout_alignParentBottom="true"
+                android:layout_alignRight="@id/repairDataList_waitingText"
+                android:background="@color/title_bg" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/repairDataList_dateBtn"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/repairDataList_dateText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="维修记录"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/text_size_17" />
+
+            <View
+                android:id="@+id/repairDataList_dateLine"
+                android:layout_width="wrap_content"
+                android:layout_height="2dp"
+                android:layout_alignLeft="@id/repairDataList_dateText"
+                android:layout_alignParentBottom="true"
+                android:layout_alignRight="@id/repairDataList_dateText"
+                android:background="@color/title_bg" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_gary" />
+
+    <ListView
+        android:id="@+id/repairDataList_dataList"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/text_white"
+        android:divider="@color/line_gary"
+        android:dividerHeight="1dp"></ListView>
+
+</LinearLayout>

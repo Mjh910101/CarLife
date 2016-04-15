@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/text_white"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/insuranceMessageInput_dayText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="事故日期"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/text_size_17" />
+
+                <TextView
+                    android:id="@+id/insuranceMessageInput_dayInput"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/insuranceMessageInput_dayText"
+                    android:textColor="@color/text_gary_02"
+                    android:textSize="@dimen/text_size_17" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_gary" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/text_white"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/insuranceMessageInput_addressText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="系统定位"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/text_size_17" />
+
+                <TextView
+                    android:id="@+id/insuranceMessageInput_positionInput"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/insuranceMessageInput_addressText"
+                    android:drawableRight="@drawable/input_position_right_icon"
+                    android:drawableStart="@drawable/input_position_life_icon"
+                    android:textColor="@color/text_gary_02"
+                    android:textSize="@dimen/text_size_17" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_gary" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/text_white"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/insuranceMessageInput_messageText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="事故描述"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/text_size_17" />
+
+                <EditText
+                    android:id="@+id/insuranceMessageInput_descriptInput"
+                    android:layout_width="wrap_content"
+                    android:layout_height="120dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/insuranceMessageInput_messageText"
+                    android:background="@drawable/input_stype_lucency"
+                    android:gravity="top|left"
+                    android:padding="0dp"
+                    android:textColor="@color/text_gary_02"
+                    android:textSize="@dimen/text_size_17" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_gary" />
+
+            <TextView
+                android:id="@+id/insuranceMessageInput_nextBtn"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@color/title_bg"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="保存，下一步"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/text_size_18" />
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/insuranceMessageInput_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</LinearLayout>

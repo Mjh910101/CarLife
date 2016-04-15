@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/text_white"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/repairMessageInput_carMasterText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="    车        主"
+                        android:layout_marginRight="8dp"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/text_size_17" />
+
+                    <TextView
+                        android:id="@+id/repairMessageInput_carMasterName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/text_gary_02"
+                        android:textSize="@dimen/text_size_17" />
+
+                    <TextView
+                        android:id="@+id/repairMessageInput_carMasterTel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:drawableLeft="@drawable/tel_icon"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/text_gary_02"
+                        android:textSize="@dimen/text_size_17" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line_gary" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/text_white"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/repairMessageInput_carNumberText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="    车牌号码"
+                        android:layout_marginRight="8dp"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/text_size_17" />
+
+                    <TextView
+                        android:id="@+id/repairMessageInput_carNumberInput"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="7dp"
+                        android:layout_toRightOf="@id/repairMessageInput_carNumberText"
+                        android:textColor="@color/text_gary_02"
+                        android:textSize="@dimen/text_size_17" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line_gary" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/text_white"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/repairMessageInput_dayText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="    建单日期"
+                        android:layout_marginRight="8dp"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/text_size_17" />
+
+                    <TextView
+                        android:id="@+id/repairMessageInput_dayInput"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="7dp"
+                        android:layout_toRightOf="@id/repairMessageInput_dayText"
+                        android:textColor="@color/text_gary_02"
+                        android:textSize="@dimen/text_size_17" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line_gary" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/text_white"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/repairMessageInput_addressText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="    定        位"
+                        android:layout_marginRight="8dp"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/text_size_17" />
+
+                    <TextView
+                        android:id="@+id/repairMessageInput_positionInput"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="7dp"
+                        android:layout_toRightOf="@id/repairMessageInput_addressText"
+                        android:drawableStart="@drawable/input_position_life_icon"
+                        android:drawableRight="@drawable/input_position_right_icon"
+                        android:textColor="@color/text_gary_02"
+                        android:textSize="@dimen/text_size_17" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@color/line_gary" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line_gary" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/text_white"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/repairMessageInput_messageText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="    受损描述"
+                        android:layout_marginRight="8dp"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/text_size_17" />
+
+                    <EditText
+                        android:id="@+id/repairMessageInput_descriptInput"
+                        android:layout_width="wrap_content"
+                        android:layout_height="120dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="7dp"
+                        android:layout_toRightOf="@id/repairMessageInput_messageText"
+                        android:background="@drawable/input_stype_lucency"
+                        android:gravity="top|left"
+                        android:padding="0dp"
+                        android:textColor="@color/text_gary_02"
+                        android:textSize="@dimen/text_size_17" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line_gary" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/text_white"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/repairMessageInput_maneyText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="期望维修价"
+                        android:layout_marginRight="8dp"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/text_size_17" />
+
+                    <TextView
+                        android:id="@+id/repairMessageInput_maneyIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/repairMessageInput_maneyText"
+                        android:layout_marginLeft="7dp"
+                        android:text="￥"
+                        android:textColor="@color/text_red"
+                        android:textSize="@dimen/text_size_17" />
+
+                    <EditText
+                        android:id="@+id/repairMessageInput_maneyInput"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:padding="0dp"
+                        android:inputType="numberDecimal"
+                        android:layout_toRightOf="@id/repairMessageInput_maneyIcon"
+                        android:background="@drawable/input_stype_lucency"
+                        android:gravity="top|left"
+                        android:textColor="@color/text_red"
+                        android:textSize="@dimen/text_size_17" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line_gary" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/text_white"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/repairMessageInput_expectWorkDayText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="    期望工时"
+                        android:layout_marginRight="8dp"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/text_size_17" />
+
+                    <EditText
+                        android:id="@+id/repairMessageInput_expectWorkDayInout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:padding="0dp"
+                        android:layout_marginLeft="7dp"
+                        android:inputType="numberDecimal"
+                        android:layout_toRightOf="@id/repairMessageInput_expectWorkDayText"
+                        android:background="@drawable/input_stype_lucency"
+                        android:gravity="top|left"
+                        android:textColor="@color/text_red"
+                        android:textSize="@dimen/text_size_17" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@color/line_gary" />
+
+                <TextView
+                    android:id="@+id/repairMessageInput_nextBtn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:background="@color/title_bg"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="保存，下一步"
+                    android:textColor="@color/text_white"
+                    android:textSize="@dimen/text_size_18" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <ProgressBar
+            android:id="@+id/repairMessageInput_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</LinearLayout>

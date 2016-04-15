@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/insurance_swipeRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/layout_insurance_user_message" />
+
+                    <include layout="@layout/layout_insurance_accident_message" />
+
+                    <LinearLayout
+                        android:id="@+id/image_btnBox"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:orientation="horizontal"
+                        android:paddingBottom="20dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="20dp">
+
+                        <RelativeLayout
+                            android:id="@+id/insurance_notInsuranceBtn"
+                            android:layout_width="0dp"
+                            android:layout_height="38dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/solid_while_bule_box">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:drawableLeft="@drawable/no_icon"
+                                android:text="不需要快赔"
+                                android:textColor="@color/title_bg"
+                                android:textSize="@dimen/text_size_17" />
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/insurance_insuranceBtn"
+                            android:layout_width="0dp"
+                            android:layout_height="38dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/solid_bule_box">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:drawableLeft="@drawable/money_icon"
+                                android:text="需要快赔"
+                                android:textColor="@color/text_white"
+                                android:textSize="@dimen/text_size_17" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/insurance_setlingMessage"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:visibility="gone"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:src="@drawable/yellow_start_icon"/>
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="该事故处理单已自动生成待发布的抢修单您可到【抢修】栏目查看"
+                            android:textColor="@color/text_gary_08"
+                            android:textSize="@dimen/text_size_18" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/insurance_backBtn"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:background="@color/title_bg"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="返回列表"
+                        android:textColor="@color/text_white"
+                        android:textSize="@dimen/text_size_18"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <ProgressBar
+            android:id="@+id/insurance_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</LinearLayout>

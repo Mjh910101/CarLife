@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_gary" />
+
+    <RelativeLayout
+        android:id="@+id/insurance_majorAddressBox"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/text_white"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/insurance_z_positionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="8dp"
+            android:text="    主责定位"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_size_17" />
+
+        <ImageView
+            android:id="@+id/insurance_z_positionRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/input_position_right_icon" />
+
+        <ImageView
+            android:id="@+id/insurance_z_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="7dp"
+            android:layout_toRightOf="@id/insurance_z_positionText"
+            android:src="@drawable/a_icon" />
+
+        <TextView
+            android:id="@+id/insurance_majorAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/insurance_z_positionRight"
+            android:layout_toRightOf="@id/insurance_z_icon"
+            android:drawableLeft="@drawable/input_position_life_icon"
+            android:textColor="@color/text_gary_02"
+            android:textSize="@dimen/text_size_17" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_gary" />
+
+    <RelativeLayout
+        android:id="@+id/insurance_secondaryAddressBox"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/text_white"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/insurance_f_positionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="8dp"
+            android:text="非主责定位"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_size_17" />
+
+        <ImageView
+            android:id="@+id/insurance_f_positionRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/input_position_right_icon" />
+
+        <ImageView
+            android:id="@+id/insurance_f_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/insurance_f_positionText"
+            android:src="@drawable/b_icon" />
+
+        <TextView
+            android:id="@+id/insurance_secondaryAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/insurance_f_positionRight"
+            android:layout_toRightOf="@id/insurance_f_icon"
+            android:drawableLeft="@drawable/input_position_life_icon"
+            android:textColor="@color/text_gary_02"
+            android:textSize="@dimen/text_size_17" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_gary" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/text_white"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/insurance_carText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="8dp"
+            android:text="    车辆定损"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_size_17" />
+
+        <ImageView
+            android:id="@+id/insurance_carRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/input_position_right_icon" />
+
+        <GridLayout
+            android:id="@+id/insurance_carArea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/insurance_carRight"
+            android:layout_toRightOf="@id/insurance_carText"
+            android:columnCount="2"
+            android:orientation="horizontal"
+            android:rowCount="1">
+
+            <TextView
+                android:id="@+id/insurance_majorCarArea"
+                android:layout_margin="8dp"
+                android:drawableLeft="@drawable/a_icon"
+                android:textSize="@dimen/text_size_17" />
+
+            <TextView
+                android:id="@+id/insurance_secondaryCarArea"
+                android:layout_margin="8dp"
+                android:drawableLeft="@drawable/b_icon"
+                android:textSize="@dimen/text_size_17" />
+        </GridLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_gary" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/text_white"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/insurance_videoText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="8dp"
+            android:text="    现场视频"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_size_17" />
+
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/insurance_videoText"
+            android:columnCount="2"
+            android:layout_marginLeft="7dp"
+            android:orientation="horizontal"
+            android:rowCount="1">
+
+            <LinearLayout android:id="@+id/insurance_majorVideoBox">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:src="@drawable/a_icon" />
+
+                <ImageView
+                    android:id="@+id/insurance_majorVideo"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@color/text_black"
+                    android:padding="10dp"
+                    android:src="@drawable/play_video_icon" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/insurance_secondaryVideoBox"
+                android:layout_marginLeft="8dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:src="@drawable/b_icon" />
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@color/text_black"
+                    android:padding="10dp"
+                    android:src="@drawable/play_video_icon" />
+            </LinearLayout>
+        </GridLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/line_gary" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_gary" />
+
+    <LinearLayout
+        android:id="@+id/insurance_majorDescriptBox"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/text_white"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:text="    主责描述"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_size_17" />
+
+        <TextView
+            android:id="@+id/insurance_majorDescript"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:textColor="@color/text_gary_02"
+            android:textSize="@dimen/text_size_17" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/line_gary" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_gary" />
+
+    <LinearLayout
+        android:id="@+id/insurance_secondaryDescriptBox"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/text_white"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:text="非主责描述"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_size_17" />
+
+        <TextView
+            android:id="@+id/insurance_secondaryDescript"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:textColor="@color/text_gary_02"
+            android:textSize="@dimen/text_size_17" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/line_gary" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_gary" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/text_white"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="8dp"
+            android:text="        状    态"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_size_17" />
+
+        <TextView
+            android:id="@+id/insurance_messageText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+
+            android:textColor="@color/text_red"
+            android:textSize="@dimen/text_size_17" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/line_gary" />
+
+</LinearLayout>

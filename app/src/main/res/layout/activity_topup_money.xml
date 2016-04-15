@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/text_white"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="余额："
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/text_size_13" />
+
+
+            <TextView
+                android:id="@+id/topUp_balanceText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/text_orange"
+                android:textSize="@dimen/text_size_20" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_gary" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/text_white"
+        android:orientation="vertical"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp">
+
+        <EditText
+            android:id="@+id/topUp_moneyInput"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/input_stype_gary"
+            android:hint="手动输入充值金额"
+            android:inputType="numberDecimal"
+            android:paddingBottom="8dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="8dp"
+            android:textColorHint="@color/text_gary_04" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/topUp_50Btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gray_box"
+                    android:gravity="center"
+                    android:text="50元"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/text_size_17" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/topUp_100Btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gray_box"
+                    android:gravity="center"
+                    android:text="100元"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/text_size_17" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/topUp_300Btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gray_box"
+                    android:gravity="center"
+                    android:text="300元"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/text_size_17" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/topUp_500Btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gray_box"
+                    android:gravity="center"
+                    android:text="500元"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/text_size_17" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/topUp_1000Btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gray_box"
+                    android:gravity="center"
+                    android:text="1000元"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/text_size_17" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/topUp_3000Btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gray_box"
+                    android:gravity="center"
+                    android:text="3000元"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/text_size_17" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/topUp_confirm"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/yellaw"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="立即充值"
+        android:textColor="@color/text_white"
+        android:textSize="@dimen/text_size_17" />
+
+    <TextView
+        android:id="@+id/topUp_agreement"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="点击立即充值，即表示您已同意《充值协议》"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/text_size_13" />
+
+</LinearLayout>

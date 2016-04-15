@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/damagedItem_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="center" />
+
+        <ImageView
+            android:id="@+id/damagedItem_addImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/add_damaged_icon" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/damagedItem_deleteIcon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/delete_damaged_icon" />
+
+</RelativeLayout>

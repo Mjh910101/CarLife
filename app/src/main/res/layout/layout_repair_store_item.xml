@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/text_white"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/repairStoreItem_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:drawableLeft="@drawable/store_name_icon"
+            android:text="name"
+            android:textColor="@color/text_gary_02"
+            android:textSize="@dimen/text_size_15" />
+
+        <TextView
+            android:id="@+id/repairStoreItem_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/store_address_icon"
+            android:text="address"
+            android:textColor="@color/text_gary_02"
+            android:textSize="@dimen/text_size_15" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/repairStoreItem_rightIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/input_position_right_icon" />
+
+    <TextView
+        android:id="@+id/repairStoreItem_maney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/repairStoreItem_rightIcon"
+        android:text="￥100"
+        android:textColor="@color/text_orange"
+        android:textSize="@dimen/text_size_18" />
+
+    <TextView
+        android:id="@+id/repairStoreItem_days"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/repairStoreItem_maney"
+        android:layout_toLeftOf="@id/repairStoreItem_rightIcon"
+        android:text="1天"
+        android:textColor="@color/text_orange"
+        android:textSize="@dimen/text_size_18" />
+
+</RelativeLayout>

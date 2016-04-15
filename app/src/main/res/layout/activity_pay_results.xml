@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+    <ImageView
+        android:id="@+id/payResult_payResultIcon"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:scaleType="fitCenter" />
+
+    <TextView
+        android:id="@+id/payResult_payResultText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/red"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="支付成功"
+        android:textColor="@color/text_white"
+        android:textSize="@dimen/text_size_18" />
+
+</LinearLayout>

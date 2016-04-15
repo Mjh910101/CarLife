@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/text_white"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/settlingBriefItem_rightIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/input_position_right_icon" />
+
+    <LinearLayout
+        android:id="@+id/settlingBriefItem_maneyBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/settlingBriefItem_maneyText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="￥100"
+            android:textColor="@color/text_orange"
+            android:textSize="@dimen/text_size_17" />
+
+        <TextView
+            android:id="@+id/settlingBriefItem_typeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/green_box"
+            android:padding="2dp"
+            android:text="未发布"
+            android:textColor="@color/text_green"
+            android:textSize="@dimen/text_size_10" />
+
+        <ImageView
+            android:id="@+id/repairItem_setllingIcon"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/seting_icon"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_toLeftOf="@id/settlingBriefItem_rightIcon"
+        android:layout_toRightOf="@id/settlingBriefItem_maneyBox"
+        android:gravity="right"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/settlingBriefItem_dayText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/server_day_icon"
+            android:text="2015-10-10"
+            android:textColor="@color/text_gary_04"
+            android:textSize="@dimen/text_size_15" />
+
+
+        <TextView
+            android:id="@+id/settlingBriefItem_telText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/text_size_10"
+            android:drawableLeft="@drawable/server_tel_icon"
+            android:textColor="@color/text_gary_04"
+            android:textSize="@dimen/text_size_15"
+            android:visibility="gone" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

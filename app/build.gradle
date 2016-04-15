@@ -1,0 +1,69 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "22.0.1"
+
+    defaultConfig {
+        applicationId "com.itkc_carlife"
+        minSdkVersion 14
+        targetSdkVersion 23
+        versionCode 202
+        versionName "2.0.2"
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    android {
+        signingConfigs {
+            debug {
+                storeFile file("/Users/Hua/Documents/android.keystore")
+                storePassword "ma13531760692hua"
+                keyAlias "android.keystore"
+                keyPassword "ma13531760692hua"
+            }
+        }
+    }
+
+    //为了解决部分第三方库重复打包了META-INF的问题
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:23.0.0'
+    //avoscloud-sdk 为 LeanCloud基础包
+    compile 'cn.leancloud.android:avoscloud-sdk:v3.+'
+    //avoscloud-push 为推送与实时聊天需要的包
+    //    compile('cn.leancloud.android:avoscloud-push:v3.+@aar') { transitive = true }
+    compile files('libs/BaiduLBS_Android.jar')
+    compile files('libs/xUtils-2.6.14.jar')
+    compile files('libs/universal-image-loader-1.9.2-SNAPSHOT-with-sources.jar')
+    compile files('libs/avoscloud-sdk-v3.13.6.jar')
+    compile files('libs/fastjson.jar')
+    compile files('libs/httpmime-4.2.4.jar')
+    compile files('libs/okhttp-2.6.0-leancloud.jar')
+    compile files('libs/okio-1.6.0-leancloud.jar')
+    compile files('libs/zxing.jar')
+    compile files('libs/library-1.2.2.jar')
+    compile files('libs/avoscloud-push-v3.13.6.jar')
+    compile files('libs/Java-WebSocket-1.3.1-leancloud.jar')
+    compile files('libs/protobuf-java-2.6.1.jar')
+    compile files('libs/IndoorscapeAlbumPlugin.jar')
+    compile files('libs/alipaySdk-20160223.jar')
+    compile files('libs/GifView.jar')
+}

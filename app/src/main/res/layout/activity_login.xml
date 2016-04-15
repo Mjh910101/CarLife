@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/title_bg"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginRight="60dp"
+                    android:layout_marginTop="60dp"
+                    android:src="@drawable/login_icon" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingBottom="20dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:background="@drawable/white_box"
+                        android:paddingBottom="8dp"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:paddingTop="8dp">
+
+                        <TextView
+                            android:id="@+id/ldgin_usetName_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="手    机"
+                            android:textColor="@color/text_white"
+                            android:textSize="@dimen/text_size_19" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="fill_parent"
+                            android:layout_marginLeft="6dp"
+                            android:layout_toRightOf="@id/ldgin_usetName_text"
+                            android:background="@color/text_white" />
+
+                        <EditText
+                            android:id="@+id/login_mobileInput"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="9dp"
+                            android:layout_toRightOf="@id/ldgin_usetName_text"
+                            android:background="@drawable/input_stype_lucency"
+                            android:inputType="number"
+                            android:textColor="@color/text_white"
+                            android:textSize="@dimen/text_size_17" />
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/white_box"
+                        android:paddingBottom="8dp"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:paddingTop="8dp">
+
+                        <TextView
+                            android:id="@+id/ldgin_code_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="验证码"
+                            android:textColor="@color/text_white"
+                            android:textSize="@dimen/text_size_19" />
+
+
+                        <LinearLayout
+                            android:id="@+id/ldgin_getCodeBtnBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/solid_white_box"
+                            android:gravity="center_vertical">
+
+                            <ImageView
+                                android:id="@+id/ldgin_getCodeIcon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/sms_icon" />
+
+                            <TextView
+                                android:id="@+id/ldgin_getCodeBtn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="发送到手机"
+                                android:textColor="@color/title_bg"
+                                android:textSize="@dimen/text_size_16" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="fill_parent"
+                            android:layout_marginLeft="6dp"
+                            android:layout_toRightOf="@id/ldgin_code_text"
+                            android:background="@color/text_white" />
+
+                        <EditText
+                            android:id="@+id/login_codeInput"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="9dp"
+                            android:layout_marginRight="3dp"
+                            android:layout_toLeftOf="@id/ldgin_getCodeBtnBox"
+                            android:layout_toRightOf="@id/ldgin_code_text"
+                            android:background="@drawable/input_stype_lucency"
+                            android:inputType="number"
+                            android:textColor="@color/text_white" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/login_loginBtn"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/login_btn"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="登    录"
+                        android:textColor="@color/text_white"
+                        android:textSize="@dimen/text_size_21" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="30dp"
+                    android:src="@drawable/company_icon" />
+
+                <RelativeLayout
+                    android:layout_width="240dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="25dp"
+                    android:visibility="gone">
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:layout_centerVertical="true"
+                        android:background="@color/text_white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@color/title_bg"
+                        android:text="IT快车股份"
+                        android:textColor="@color/text_white"
+                        android:textSize="@dimen/text_size_16" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+        <ProgressBar
+            android:id="@+id/lgoin_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</LinearLayout>

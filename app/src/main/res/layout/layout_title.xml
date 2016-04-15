@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/title_titleBg"
+    android:layout_width="match_parent"
+    android:layout_height="58dp"
+    android:background="@color/title_bg"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/title_titleName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="车生活"
+        android:textColor="@color/text_white"
+        android:textSize="@dimen/text_size_22"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/title_titleNameIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/login_icon"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/title_partyDataIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/party_data_icon"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/title_addIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/add_icon"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/title_sainningIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/title_sanning_icon"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/title_userBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:drawableLeft="@drawable/title_user_icon"
+        android:textSize="@dimen/text_size_18"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/title_backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:drawableLeft="@drawable/title_back_icon"
+        android:textSize="@dimen/text_size_18"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/title_mapBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/title_map_icon"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/title_saveBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:text="保存"
+        android:textColor="@color/text_white"
+        android:textSize="@dimen/text_size_18"
+        android:visibility="gone" />
+
+</RelativeLayout>

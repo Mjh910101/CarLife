@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/text_white"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/party_pic"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/activity_bg" />
+
+    <TextView
+        android:id="@+id/party_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/text_size_18" />
+
+
+    <TextView
+        android:id="@+id/party_info"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:textColor="@color/text_gary_02"
+        android:textSize="@dimen/text_size_17" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_gary" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:id="@+id/party_favorBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/bule_box"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="5dp">
+
+                <ImageView
+                    android:id="@+id/party_favorBtnIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/delete_party_icon" />
+
+                <TextView
+                    android:id="@+id/party_favorBtnText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="取消收藏"
+                    android:textColor="@color/text_blue"
+                    android:textSize="@dimen/text_size_17" />
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/party_joinBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:id="@+id/party_joinBtnBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/solid_bule_box"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="5dp">
+
+                <ImageView
+                    android:id="@+id/party_joinBtnIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/out_party_icon" />
+
+                <TextView
+                    android:id="@+id/party_joinBtnText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="已经参加"
+                    android:textColor="@color/text_white"
+                    android:textSize="@dimen/text_size_16" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_gary" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="简介："
+        android:textColor="@color/text_gary_02"
+        android:textSize="@dimen/text_size_16" />
+
+
+    <TextView
+        android:id="@+id/party_descript"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/text_size_16" />
+
+    <WebView
+        android:id="@+id/party_descriptWeb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:visibility="gone"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_gary" />
+
+    <TextView
+        android:id="@+id/party_userSum"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:textSize="@dimen/text_size_17"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/party_userSumLine"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_gary" />
+
+    <com.itkc_carlife.views.InsideListView
+        android:id="@+id/party_userList"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/text_white"
+        android:dividerHeight="0dp"></com.itkc_carlife.views.InsideListView>
+
+</LinearLayout>

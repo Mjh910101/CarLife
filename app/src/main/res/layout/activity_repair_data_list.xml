@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:id="@+id/repairDataList_throughLayou"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/activity_repair_through_v2" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/repairDataList_notThroughLayou"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/text_white"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <include layout="@layout/activity_repair_not_through" />
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/repairDataList_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</LinearLayout>
