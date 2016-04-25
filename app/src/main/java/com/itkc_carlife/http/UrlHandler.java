@@ -24,7 +24,8 @@ package com.itkc_carlife.http;
 public class UrlHandler {
 
     //    private final static String index = "http://192.168.1.237:3000";
-    private final static String index = "http://stg-carlive.leanapp.cn";
+    private final static String index = "http://carlive.leanapp.cn";
+//    private final static String index = "http://stg-carlive.leanapp.cn";
     //    private final static String index = "http://dev.carlive.avosapps.com";
     private final static String api = "/api/v1";
 
