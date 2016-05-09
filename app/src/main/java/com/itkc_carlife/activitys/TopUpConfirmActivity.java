@@ -1,6 +1,7 @@
 package com.itkc_carlife.activitys;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -14,6 +15,7 @@ import android.widget.TextView;
 import com.alipay.sdk.app.PayTask;
 import com.itkc_carlife.R;
 import com.itkc_carlife.box.handler.UserObjHandler;
+import com.itkc_carlife.handlers.DateHandle;
 import com.itkc_carlife.handlers.JsonHandle;
 import com.itkc_carlife.handlers.MessageHandler;
 import com.itkc_carlife.http.HttpUtilsBox;
@@ -28,6 +30,14 @@ import com.lidroid.xutils.http.callback.RequestCallBack;
 import com.lidroid.xutils.http.client.HttpRequest.HttpMethod;
 import com.lidroid.xutils.view.annotation.ViewInject;
 import com.lidroid.xutils.view.annotation.event.OnClick;
+import com.tencent.mm.sdk.modelbase.BaseReq;
+import com.tencent.mm.sdk.modelbase.BaseResp;
+import com.tencent.mm.sdk.modelpay.PayReq;
+import com.tencent.mm.sdk.openapi.IWXAPI;
+import com.tencent.mm.sdk.openapi.IWXAPIEventHandler;
+import com.tencent.mm.sdk.openapi.WXAPIFactory;
+
+import net.sourceforge.simcpux.wxapi.MD5;
 
 import org.json.JSONObject;
 
@@ -65,6 +75,8 @@ public class TopUpConfirmActivity extends BaseActivity {
     private TextView titleName;
     @ViewInject(R.id.topUp_confirm_zhifubaoRadio)
     private RadioButton zhifubaoRadio;
+    @ViewInject(R.id.topUp_confirm_weixinRadio)
+    private RadioButton weixinRadio;
     @ViewInject(R.id.topUp_confirm_topUpManey)
     private TextView topUpManeyText;
     @ViewInject(R.id.topUp_confirm_progress)
@@ -83,7 +95,7 @@ public class TopUpConfirmActivity extends BaseActivity {
         initActivity();
     }
 
-    @OnClick({R.id.title_backBtn, R.id.topUp_confirm_zhifubaoLayout, R.id.topUp_confirm_topUpBtm})
+    @OnClick({R.id.title_backBtn, R.id.topUp_confirm_zhifubaoLayout, R.id.topUp_confirm_weixinLayout, R.id.topUp_confirm_topUpBtm})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.title_backBtn:
@@ -92,10 +104,19 @@ public class TopUpConfirmActivity extends BaseActivity {
             case R.id.topUp_confirm_zhifubaoLayout:
                 setZhiFuBaoRadio();
                 break;
+            case R.id.topUp_confirm_weixinLayout:
+                setWeixinRadio();
+                break;
             case R.id.topUp_confirm_topUpBtm:
                 topUp();
                 break;
         }
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        finish();
     }
 
     private void initActivity() {
@@ -117,14 +138,34 @@ public class TopUpConfirmActivity extends BaseActivity {
     }
 
     public void setZhiFuBaoRadio() {
-        Boolean b = zhifubaoRadio.isChecked();
-        zhifubaoRadio.setChecked(!b);
+        initRadio();
+        zhifubaoRadio.setChecked(true);
+    }
+
+    private void initRadio() {
+        zhifubaoRadio.setChecked(false);
+        weixinRadio.setChecked(false);
+    }
+
+    public void setWeixinRadio() {
+        initRadio();
+        weixinRadio.setChecked(true);
     }
 
     private void topUp() {
-        if (zhifubaoRadio.isChecked()) {
+        if (isZhifubao()) {
             downloadObjectId("alipay");
+        } else if (isWeixin()) {
+            downloadObjectId("weixin");
         }
+    }
+
+    public boolean isZhifubao() {
+        return zhifubaoRadio.isChecked();
+    }
+
+    public boolean isWeixin() {
+        return weixinRadio.isChecked();
     }
 
     private void downloadObjectId(String paytype) {
@@ -135,6 +176,11 @@ public class TopUpConfirmActivity extends BaseActivity {
         params.addBodyParameter("total", String.valueOf(topUpManey));
         params.addBodyParameter("paytype", paytype);
         params.addBodyParameter("sessiontoken", UserObjHandler.getSessionToken(context));
+//        if (isZhifubao()) {
+//            params.addBodyParameter("total", String.valueOf(topUpManey));
+//        } else if (isWeixin()) {
+//            params.addBodyParameter("total", "1");
+//        }
 
         HttpUtilsBox.getHttpUtil().send(HttpMethod.POST, url, params,
                 new RequestCallBack<String>() {
@@ -157,13 +203,62 @@ public class TopUpConfirmActivity extends BaseActivity {
                             if (status == 1) {
                                 JSONObject resultJson = JsonHandle.getJSON(json, "result");
                                 if (resultJson != null) {
-                                    tipUpToZhiFubao(JsonHandle.getString(resultJson, "objectId"));
+                                    if (isZhifubao()) {
+                                        tipUpToZhiFubao(JsonHandle.getString(resultJson, "objectId"));
+                                    } else if (isWeixin()) {
+                                        tipUpToWeixin(JsonHandle.getJSON(resultJson, "xml"));
+                                    }
                                 }
                             }
                         }
                     }
 
                 });
+    }
+
+    private static String appId = "wx9bbaededfd653834";
+    private IWXAPI msgApi;
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        setIntent(intent);
+//        msgApi.handleIntent(intent, wxHandler);
+    }
+
+    private void tipUpToWeixin(JSONObject json) {
+        String timeStamp = String.valueOf(DateHandle.getTime());
+        msgApi = WXAPIFactory.createWXAPI(context, appId, false);
+//        msgApi.handleIntent(getIntent(), wxHandler);
+        msgApi.registerApp(appId);
+
+        PayReq request = new PayReq();
+        request.appId = appId;
+        request.partnerId = JsonHandle.getString(json, "mch_id");
+        request.prepayId = JsonHandle.getString(json, "prepay_id");
+        request.packageValue = "Sign=WXPay";
+        request.nonceStr = JsonHandle.getString(json, "nonce_str");
+        request.timeStamp = timeStamp;
+        request.sign = getSign(json, timeStamp);
+//        request.sign = JsonHandle.getString(json, "sign");
+
+        Log.d("", getSign(json, timeStamp));
+
+        msgApi.sendReq(request);
+    }
+
+    private String getSign(JSONObject json, String t) {
+        String id = "appid=" + appId;
+        String partnerId = "partnerid=" + JsonHandle.getString(json, "mch_id");
+        String prepayId = "prepayid=" + JsonHandle.getString(json, "prepay_id");
+        String packageValue = "package=" + "Sign=WXPay";
+        String nonceStr = "noncestr=" + JsonHandle.getString(json, "nonce_str");
+        String timeStamp = "timestamp=" + t;
+
+        String stringA = id + "&" + nonceStr + "&" + packageValue + "&" + partnerId + "&" + prepayId + "&" + timeStamp;
+        String stringSignTemp = stringA + "&key=b500fd6c3855f6efaed3c8a624bf1c13";
+        Log.d("", stringSignTemp);
+        return MD5.getMessageDigest(stringSignTemp.getBytes()).toUpperCase();
     }
 
     private void tipUpToZhiFubao(String objectId) {
@@ -242,6 +337,29 @@ public class TopUpConfirmActivity extends BaseActivity {
             }
         }
 
-        ;
     };
+
+    private IWXAPIEventHandler wxHandler = new IWXAPIEventHandler() {
+
+        @Override
+        public void onReq(BaseReq baseReq) {
+            Log.d("", "onPayFinish, errStr = " + 100000);
+        }
+
+        @Override
+        public void onResp(BaseResp baseResp) {
+            Log.d("", "onPayFinish, errCode = " + baseResp.errCode);
+            Log.d("", "onPayFinish, errStr = " + baseResp.errStr);
+            switch (baseResp.errCode) {
+                case 1:
+                    MessageHandler.showToast(context, "支付成功");
+                    finish();
+                    break;
+                default:
+                    MessageHandler.showToast(context, "支付失败 ：" + baseResp.errStr);
+                    break;
+            }
+        }
+    };
+
 }

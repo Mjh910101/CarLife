@@ -36,6 +36,8 @@
     <color name="viewfinder_mask">#60000000</color>
     <color name="possible_result_points">#c0ffff00</color>
 
+    <color name="navpage">#FFE1E8EB</color>
+
     <!--  -->
     <color name="holo_blue_light">#ff33b5e5</color>
     <!-- A light Holo shade of green -->

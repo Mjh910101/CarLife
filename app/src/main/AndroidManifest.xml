@@ -19,6 +19,8 @@
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
 
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -56,7 +58,7 @@
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|stateUnchanged" />
         <activity
-            android:name="com.itkc_carlife.activitys.TopUpConfirmActivity"
+            android:name=".activitys.TopUpConfirmActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name="com.itkc_carlife.activitys.InputCarDataActivity"
@@ -179,6 +181,10 @@
             android:name="com.itkc_carlife.activitys.WaitingRepairStoreActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"/>
         <!-- alipay sdk begin -->
         <activity
             android:name="com.alipay.sdk.app.H5PayActivity"
@@ -186,6 +192,12 @@
             android:exported="false"
             android:screenOrientation="behind"
             android:windowSoftInputMode="adjustResize|stateHidden"></activity>
+        <!--微信支付回调-->
+        <!--<receiver android:name=".wxapi.SampleEventProcessor">-->
+        <!--<intent-filter>-->
+        <!--<action android:name="com.android.broadcast.RECEIVER_ACTION" />-->
+        <!--</intent-filter>-->
+        <!--</receiver>-->
 
         <!--百度定位-->
         <service

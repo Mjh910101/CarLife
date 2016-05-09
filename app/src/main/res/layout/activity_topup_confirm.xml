@@ -124,6 +124,7 @@
                 android:background="@color/line_gary" />
 
             <RelativeLayout
+                android:id="@+id/topUp_confirm_weixinLayout"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/text_white"
@@ -131,7 +132,7 @@
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
                 android:paddingTop="8dp"
-                android:visibility="gone">
+                android:visibility="visible">
 
                 <ImageView
                     android:id="@+id/topUp_confirm_weixinIcon"
@@ -160,11 +161,13 @@
                     android:textSize="@dimen/text_size_15" />
 
                 <RadioButton
+                    android:id="@+id/topUp_confirm_weixinRadio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
-                    android:button="@drawable/pay_sype" />
+                    android:button="@drawable/pay_sype"
+                    android:clickable="false" />
 
             </RelativeLayout>
 

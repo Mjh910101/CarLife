@@ -79,7 +79,9 @@ public class MainActivity extends BaseActivity {
     private LineGridView dataGrid;
     @ViewInject(R.id.title_userBtn)
     private TextView userBtn;
-    @ViewInject(R.id.title_mapBtn)
+    @ViewInject(R.id.title_zhuBtn)
+    private ImageView zhuBtn;
+    @ViewInject(R.id.main_mapIcon)
     private ImageView mapBtn;
     @ViewInject(R.id.main_drawerLayout)
     private DrawerLayout drawerLayout;
@@ -169,7 +171,8 @@ public class MainActivity extends BaseActivity {
     }
 
     @OnClick({R.id.title_userBtn, R.id.main_left_userBox, R.id.main_left_topUpMoney, R.id.main_left_carData,
-            R.id.main_left_claimsData, R.id.title_mapBtn, R.id.mainLsft_userName, R.id.main_positionIcon})
+            R.id.main_left_claimsData, R.id.main_mapIcon, R.id.mainLsft_userName, R.id.main_positionIcon,
+            R.id.title_zhuBtn})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.title_userBtn:
@@ -192,7 +195,7 @@ public class MainActivity extends BaseActivity {
                 closeLift();
                 Passageway.jumpActivity(context, InputClaimsDataActivity.class);
                 break;
-            case R.id.title_mapBtn:
+            case R.id.main_mapIcon:
 //                Passageway.jumpActivity(context,MapActivity.class);
                 if (dataGrid.getVisibility() == View.VISIBLE) {
                     dataGrid.setVisibility(View.GONE);
@@ -205,12 +208,22 @@ public class MainActivity extends BaseActivity {
             case R.id.main_positionIcon:
                 initMap();
                 break;
+            case R.id.title_zhuBtn:
+                jumpZhuActivity();
+                break;
         }
+    }
+
+    private void jumpZhuActivity() {
+        Bundle b=new Bundle();
+        b.putString(WebActivity.URL, "http://www.51dojoy.com");
+        b.putString(WebActivity.TITLE, "");
+        Passageway.jumpActivity(context, WebActivity.class, b);
     }
 
     private void initActivity() {
         userBtn.setVisibility(View.VISIBLE);
-        mapBtn.setVisibility(View.VISIBLE);
+        zhuBtn.setVisibility(View.VISIBLE);
         titleNameIcon.setVisibility(View.VISIBLE);
         dataGrid.setAdapter(new MainTapAdaper(context));
         if (UserObjHandler.isLogin(context)) {

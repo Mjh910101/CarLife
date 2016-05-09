@@ -28,10 +28,20 @@
                 android:id="@+id/main_positionIcon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@id/dialog_title"
+                android:layout_alignLeft="@id/main_baiduMap"
                 android:layout_alignParentBottom="true"
                 android:layout_margin="5dp"
                 android:src="@drawable/map_position_icon" />
+
+            <ImageView
+                android:id="@+id/main_mapIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/main_baiduMap"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="5dp"
+                android:src="@drawable/title_map_icon" />
+
         </RelativeLayout>
 
         <com.itkc_carlife.views.LineGridView
