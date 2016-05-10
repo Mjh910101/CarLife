@@ -22,6 +22,7 @@ import com.itkc_carlife.http.HttpUtilsBox;
 import com.itkc_carlife.http.UrlHandler;
 import com.itkc_carlife.topup.zhifubao.PayResult;
 import com.itkc_carlife.topup.zhifubao.ZhiFuBao;
+import com.itkc_carlife.wxapi.WXPayEntryActivity;
 import com.lidroid.xutils.ViewUtils;
 import com.lidroid.xutils.exception.HttpException;
 import com.lidroid.xutils.http.RequestParams;
@@ -114,9 +115,23 @@ public class TopUpConfirmActivity extends BaseActivity {
     }
 
     @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        switch (requestCode) {
+            case WXPayEntryActivity.WEIXIN_RESULT:
+                finish();
+                break;
+
+        }
+
+        super.onActivityResult(requestCode, resultCode, data);
+    }
+
+    @Override
     protected void onRestart() {
         super.onRestart();
-        finish();
+//        if (msgApi != null) {
+//            msgApi.detach();
+//        }
     }
 
     private void initActivity() {
@@ -206,7 +221,8 @@ public class TopUpConfirmActivity extends BaseActivity {
                                     if (isZhifubao()) {
                                         tipUpToZhiFubao(JsonHandle.getString(resultJson, "objectId"));
                                     } else if (isWeixin()) {
-                                        tipUpToWeixin(JsonHandle.getJSON(resultJson, "xml"));
+                                        tipUpToWeixin(resultJson);
+//                                        tipUpToWeixin(JsonHandle.getJSON(resultJson, "xml"));
                                     }
                                 }
                             }
@@ -228,10 +244,9 @@ public class TopUpConfirmActivity extends BaseActivity {
 
     private void tipUpToWeixin(JSONObject json) {
         String timeStamp = String.valueOf(DateHandle.getTime());
-        msgApi = WXAPIFactory.createWXAPI(context, appId, false);
+        msgApi = WXAPIFactory.createWXAPI(context, appId, true);
 //        msgApi.handleIntent(getIntent(), wxHandler);
         msgApi.registerApp(appId);
-
         PayReq request = new PayReq();
         request.appId = appId;
         request.partnerId = JsonHandle.getString(json, "mch_id");
@@ -244,7 +259,11 @@ public class TopUpConfirmActivity extends BaseActivity {
 
         Log.d("", getSign(json, timeStamp));
 
-        msgApi.sendReq(request);
+        if (msgApi.isWXAppInstalled()) {
+            msgApi.sendReq(request);
+        } else {
+            MessageHandler.showToast(context, "请先安装微信");
+        }
     }
 
     private String getSign(JSONObject json, String t) {

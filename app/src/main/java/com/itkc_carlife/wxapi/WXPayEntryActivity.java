@@ -21,6 +21,7 @@ import android.util.Log;
 public class WXPayEntryActivity extends BaseActivity implements IWXAPIEventHandler {
 
     private static final String TAG = "MicroMsg.SDKSample.WXPayEntryActivity";
+    public final static int WEIXIN_RESULT = 10021;
 
     private IWXAPI api;
 
@@ -63,9 +64,10 @@ public class WXPayEntryActivity extends BaseActivity implements IWXAPIEventHandl
                 MessageHandler.showToast(context, "已取消支付");
                 break;
             default:
-                MessageHandler.showToast(context, "支付失败 : " + resp.errCode);
+                MessageHandler.showToast(context, "支付失败 : " + resp.errStr);
                 break;
         }
+        setResult(WEIXIN_RESULT);
         finish();
     }
 }
