@@ -216,7 +216,7 @@ public class MainActivity extends BaseActivity {
 
     private void jumpZhuActivity() {
         Bundle b=new Bundle();
-        b.putString(WebActivity.URL, "http://www.51dojoy.com");
+        b.putString(WebActivity.URL, "http://zj.10000autos.cn/Wap/SelfDrive/search_market?lng=113.362948&lat=22.524559");
         b.putString(WebActivity.TITLE, "");
         Passageway.jumpActivity(context, WebActivity.class, b);
     }

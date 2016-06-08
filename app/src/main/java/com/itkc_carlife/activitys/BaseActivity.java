@@ -35,7 +35,7 @@ public class BaseActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        AVOSCloud.initialize(this, "E4G44AwCMV2DGLdthLdYy3lo-gzGzoHsz", "83Qt7Ol6yK8kcpMm8G4KXiuF");
+//        AVOSCloud.initialize(this, "E4G44AwCMV2DGLdthLdYy3lo-gzGzoHsz", "83Qt7Ol6yK8kcpMm8G4KXiuF");
         context = this;
     }
 

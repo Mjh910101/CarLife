@@ -197,7 +197,7 @@ public class SettlingActivity extends BaseActivity {
     }
 
     private void setOnRefreshListener() {
-        swipeRefresh.setColorScheme(R.color.holo_blue_bright,
+        swipeRefresh.setColorSchemeResources(R.color.holo_blue_bright,
                 R.color.holo_green_light, R.color.holo_orange_light,
                 R.color.holo_red_light);
         swipeRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
